@@ -4,7 +4,7 @@
 #
 Name     : tevent
 Version  : 0.9.28
-Release  : 2
+Release  : 3
 URL      : https://www.samba.org/ftp/tevent/tevent-0.9.28.tar.gz
 Source0  : https://www.samba.org/ftp/tevent/tevent-0.9.28.tar.gz
 Summary  : An event system library
