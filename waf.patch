@@ -1,0 +1,8 @@
+--- tevent-0.9.37/buildtools/bin/waf~	2015-04-29 09:20:16.000000000 +0000
++++ tevent-0.9.37/buildtools/bin/waf	2018-09-02 17:10:23.119097388 +0000
+@@ -1,4 +1,4 @@
+-#!/usr/bin/env python
++#!/usr/bin/env python2
+ # encoding: ISO-8859-1
+ # Thomas Nagy, 2005-2010
+ 
