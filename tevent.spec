@@ -4,13 +4,16 @@
 #
 Name     : tevent
 Version  : 0.9.38
-Release  : 8
+Release  : 9
 URL      : https://www.samba.org/ftp/tevent/tevent-0.9.38.tar.gz
 Source0  : https://www.samba.org/ftp/tevent/tevent-0.9.38.tar.gz
 Summary  : An event system library
 Group    : Development/Tools
 License  : LGPL-3.0+
 Requires: tevent-lib = %{version}-%{release}
+Requires: tevent-python = %{version}-%{release}
+Requires: tevent-python3 = %{version}-%{release}
+BuildRequires : python3-dev
 BuildRequires : talloc-dev
 Patch1: 0001-add-mock-disable-static-option.patch
 Patch2: 0002_fix_finding_waf.patch
@@ -37,6 +40,24 @@ Group: Libraries
 lib components for the tevent package.
 
 
+%package python
+Summary: python components for the tevent package.
+Group: Default
+Requires: tevent-python3 = %{version}-%{release}
+
+%description python
+python components for the tevent package.
+
+
+%package python3
+Summary: python3 components for the tevent package.
+Group: Default
+Requires: python3-core
+
+%description python3
+python3 components for the tevent package.
+
+
 %prep
 %setup -q -n tevent-0.9.38
 %patch1 -p1
@@ -47,12 +68,12 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1547674525
+export SOURCE_DATE_EPOCH=1547674701
 %configure --disable-static --disable-rpath --disable-rpath-install
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1547674525
+export SOURCE_DATE_EPOCH=1547674701
 rm -rf %{buildroot}
 %make_install
 
@@ -69,3 +90,10 @@ rm -rf %{buildroot}
 %defattr(-,root,root,-)
 /usr/lib64/libtevent.so.0
 /usr/lib64/libtevent.so.0.9.38
+
+%files python
+%defattr(-,root,root,-)
+
+%files python3
+%defattr(-,root,root,-)
+/usr/lib/python3*/*
