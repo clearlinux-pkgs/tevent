@@ -1,0 +1,9 @@
+--- tevent-0.9.38//Makefile.orig	2019-01-16 10:27:42.453329909 -0800
++++ tevent-0.9.38//Makefile	2019-01-16 10:27:52.284227955 -0800
+@@ -1,5 +1,5 @@
+ # simple makefile wrapper to run waf
+-WAF_BINARY=$(PYTHON) ../../buildtools/bin/waf
++WAF_BINARY=$(PYTHON) ./buildtools/bin/waf
+ WAF=PYTHONHASHSEED=1 WAF_MAKE=1 $(WAF_BINARY)
+ 
+ all:

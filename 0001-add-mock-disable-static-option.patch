@@ -1,0 +1,13 @@
+--- tevent-0.9.38/wscript.orig	2019-01-16 13:31:23.234706218 -0800
++++ tevent-0.9.38/wscript	2019-01-16 13:31:42.623523517 -0800
+@@ -24,6 +24,10 @@
+     opt.PRIVATE_EXTENSION_DEFAULT('tevent', noextension='tevent')
+     opt.RECURSE('lib/replace')
+     opt.RECURSE('lib/talloc')
++    opt.add_option('--disable-static',
++                   help='unused option, added to avoid %configure (RPM) macro break',
++                   action='store_false',
++                   dest='disable_static')
+ 
+ 
+ def configure(conf):
