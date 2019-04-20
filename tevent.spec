@@ -4,7 +4,7 @@
 #
 Name     : tevent
 Version  : 0.10.0
-Release  : 10
+Release  : 11
 URL      : https://www.samba.org/ftp/tevent/tevent-0.10.0.tar.gz
 Source0  : https://www.samba.org/ftp/tevent/tevent-0.10.0.tar.gz
 Summary  : An event system based on the talloc memory management library
