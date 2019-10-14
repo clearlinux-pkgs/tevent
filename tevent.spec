@@ -4,10 +4,10 @@
 #
 Name     : tevent
 Version  : 0.10.1
-Release  : 13
+Release  : 14
 URL      : https://www.samba.org/ftp/tevent/tevent-0.10.1.tar.gz
 Source0  : https://www.samba.org/ftp/tevent/tevent-0.10.1.tar.gz
-Summary  : An event system based on the talloc memory management library
+Summary  : An event system library
 Group    : Development/Tools
 License  : LGPL-3.0+
 Requires: tevent-lib = %{version}-%{release}
@@ -18,19 +18,14 @@ BuildRequires : talloc-dev
 Patch1: 0001-add-mock-disable-static-option.patch
 
 %description
-This subsystem ensures that we can always use a certain core set of
-functions and types, that are either provided by the OS or by replacement
-functions / definitions in this subsystem. The aim is to try to stick
-to POSIX functions in here as much as possible. Convenience functions
-that are available on no platform at all belong in other subsystems
-(such as LIBUTIL).
+See http://code.google.com/p/waf/ for more information on waf
+You can get a svn copy of the upstream source with:
 
 %package dev
 Summary: dev components for the tevent package.
 Group: Development
 Requires: tevent-lib = %{version}-%{release}
 Provides: tevent-devel = %{version}-%{release}
-Requires: tevent = %{version}-%{release}
 Requires: tevent = %{version}-%{release}
 
 %description dev
@@ -72,8 +67,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1571006873
-# -Werror is for werrorists
+export SOURCE_DATE_EPOCH=1571015891
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$CFLAGS -fno-lto "
@@ -83,7 +77,7 @@ export CXXFLAGS="$CXXFLAGS -fno-lto "
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1571006873
+export SOURCE_DATE_EPOCH=1571015891
 rm -rf %{buildroot}
 %make_install
 
@@ -100,10 +94,6 @@ rm -rf %{buildroot}
 %defattr(-,root,root,-)
 /usr/lib64/libtevent.so.0
 /usr/lib64/libtevent.so.0.10.1
-/usr/lib64/tevent/libpytalloc-util.cpython-37m-x86-64-linux-gnu.so.2
-/usr/lib64/tevent/libpytalloc-util.cpython-37m-x86-64-linux-gnu.so.2.3.0
-/usr/lib64/tevent/libtalloc.so.2
-/usr/lib64/tevent/libtalloc.so.2.3.0
 
 %files python
 %defattr(-,root,root,-)
