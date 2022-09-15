@@ -2,3 +2,4 @@
 # picked up automatically. One name per line, no whitespace.
 talloc-dev
 python3-dev
+talloc-extras
