@@ -5,6 +5,8 @@ libtevent.so.0:TEVENT_0.11.0
 libtevent.so.0:TEVENT_0.12.0
 libtevent.so.0:TEVENT_0.12.1
 libtevent.so.0:TEVENT_0.13.0
+libtevent.so.0:TEVENT_0.14.0
+libtevent.so.0:TEVENT_0.14.1
 libtevent.so.0:TEVENT_0.9.10
 libtevent.so.0:TEVENT_0.9.11
 libtevent.so.0:TEVENT_0.9.12
@@ -98,6 +100,7 @@ libtevent.so.0:tevent_fd_set_auto_close
 libtevent.so.0:tevent_fd_set_close_fn
 libtevent.so.0:tevent_fd_set_flags
 libtevent.so.0:tevent_fd_set_tag
+libtevent.so.0:tevent_find_ops_byname
 libtevent.so.0:tevent_get_trace_callback
 libtevent.so.0:tevent_get_trace_fd_callback
 libtevent.so.0:tevent_get_trace_immediate_callback
@@ -166,6 +169,10 @@ libtevent.so.0:tevent_set_trace_timer_callback
 libtevent.so.0:tevent_signal_get_tag
 libtevent.so.0:tevent_signal_set_tag
 libtevent.so.0:tevent_signal_support
+libtevent.so.0:tevent_thread_call_depth_activate
+libtevent.so.0:tevent_thread_call_depth_deactivate
+libtevent.so.0:tevent_thread_call_depth_reset_from_req
+libtevent.so.0:tevent_thread_call_depth_start
 libtevent.so.0:tevent_thread_proxy_create
 libtevent.so.0:tevent_thread_proxy_schedule
 libtevent.so.0:tevent_threaded_context_create
