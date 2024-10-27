@@ -7,7 +7,7 @@
 #
 Name     : tevent
 Version  : 0.16.1
-Release  : 47
+Release  : 48
 URL      : https://www.samba.org/ftp/tevent/tevent-0.16.1.tar.gz
 Source0  : https://www.samba.org/ftp/tevent/tevent-0.16.1.tar.gz
 Summary  : An event system library
